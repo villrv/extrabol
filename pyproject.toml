@@ -32,7 +32,8 @@ classifiers=[
 requires-python='>=3.6'
 
 [project.scripts]
-extrabol = "extrabol.extrabol:main"
+extrabol = "extrabol.cli:main"
+
 
 [project.urls]
 Repository = "https://github.com/villrv/extrabol"
@@ -41,14 +42,12 @@ Documentation = "https://extrabol.readthedocs.io/en/latest/"
 
 [tool.setuptools]
 packages=["extrabol",
-          "extrabol.template_bank",
-          "extrabol.example"
+          "extrabol.template_bank"
          ]
 include-package-data = true
 
 
 [tool.setuptools.package-data]
-"extrabol.example" = ["SN2010bc.snana.dat"]
 "extrabol.filter_data" = ["fps.xml"]
 "extrabol.template_bank" = ["*.npz"]
 
